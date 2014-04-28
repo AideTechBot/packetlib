@@ -18,3 +18,8 @@ def encode_data(data,sepchar):
 	encdata = str(sepchar).join(data)
 	message = "START" + str(sepchar) + encdata + str(sepchar) + "END"
 	return message
+
+	
+#this function take a valid string in the format above and decodes it to an array
+#data is the string
+def parse_data(data):
