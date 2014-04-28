@@ -13,8 +13,8 @@ written by Aidetechbot
 def encode_data(data,sepchar):
 	if(sepchar == ""):
 		raise Exception("Invalid seperation char.")
+	if(not type(data) is list):
+		raise TypeError("Invalid data type: " + str(type(data)))
 	encdata = str(sepchar).join(data)
 	message = "START" + str(sepchar) + encdata + str(sepchar) + "END"
 	return message
-
-print encode_data(["abba"],"")
